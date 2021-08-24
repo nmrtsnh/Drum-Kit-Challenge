@@ -4,6 +4,7 @@ function playSound(e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
+   key.classList.add("playing");
 }
 var keys = document.querySelectorAll(".key");
 keys.classList.add("playing");
