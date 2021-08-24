@@ -6,6 +6,12 @@ function playSound(e) {
   audio.play();
    key.classList.add("playing");
 }
+
+function rmeoveTransition(e) {
+  if(e.propertyName !== 'transform') return;
+	this.classList.remove('playing');
+}
+
 const keys = document.querySelectorAll(".key");
 keys.forEach((key) => key.addEventListener("transitioend", removeTransition));
 
