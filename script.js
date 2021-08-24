@@ -5,5 +5,7 @@ function playSound(e) {
   audio.currentTime = 0;
   audio.play();
 }
+var keys = document.querySelectorAll(".key");
+keys.classList.add("playing");
 
 window.addEventListener("keydown", playSound);
