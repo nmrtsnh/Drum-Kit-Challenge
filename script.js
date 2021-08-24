@@ -4,15 +4,15 @@ function playSound(e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
-//    key.classList.add("playing");
+   key.classList.add("playing");
 }
 
-// function rmeoveTransition(e) {
-//   if(e.propertyName !== 'transform') return;
-// 	this.classList.remove('playing');
-// }
+function rmeoveTransition(e) {
+  if(e.propertyName !== 'transform') return;
+	this.classList.remove('playing');
+}
 
-// const keys = document.querySelectorAll(".key");
-// keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+const keys = document.querySelectorAll(".key");
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
 window.addEventListener("keydown", playSound);
