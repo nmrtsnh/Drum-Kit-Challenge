@@ -6,7 +6,7 @@ function playSound(e) {
   audio.play();
    key.classList.add("playing");
 }
-// var keys = document.querySelectorAll(".key");
-// keys.classList.add("playing");
+const keys = document.querySelectorAll(".key");
+keys.forEach((key) => key.addEventListener("transitioend", removeTransition));
 
 window.addEventListener("keydown", playSound);
